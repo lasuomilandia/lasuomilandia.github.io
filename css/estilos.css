@@ -1,0 +1,211 @@
+/* =========================================================
+   La Suomilandia — estilos de la web (versión 1)
+   Colores tomados del corto "El muffin tiene vida".
+   Para cambiar un color en TODA la web, cambialo acá abajo.
+   ========================================================= */
+:root {
+  --nieve: #F6F1E7;          /* fondo claro: nieve y masa de muffin */
+  --nieve-2: #EDE4D3;        /* fondo de tarjetas */
+  --noche: #1E2A44;          /* texto y fondo oscuro: sombrero del Mago */
+  --noche-2: #2C3B5C;
+  --dulce: #C8843A;          /* acento cálido: dulce de leche */
+  --dulce-oscuro: #9A5E22;
+  --rojo-buzo: #B23A2E;      /* rayas rojas del buzo del Mago */
+  --lago: #5B86A8;           /* acento frío: ventanas y arándanos */
+  --pino: #7A4E2D;           /* madera de la cabaña */
+  --texto: #1E2A44;
+  --texto-suave: #5A6378;
+
+  --letra-titulos: "Fraunces", Georgia, serif;
+  --letra-texto: "Nunito", "Segoe UI", system-ui, sans-serif;
+  --radio: 18px;
+  --sombra: 0 10px 30px rgba(30, 42, 68, 0.12);
+  --ancho: 1100px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--nieve);
+  color: var(--texto);
+  font-family: var(--letra-texto);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+img, video { max-width: 100%; display: block; }
+a { color: var(--dulce-oscuro); }
+h1, h2, h3 { font-family: var(--letra-titulos); line-height: 1.15; margin: 0 0 .5em; color: var(--noche); }
+h1 { font-size: clamp(2.3rem, 6vw, 4.2rem); }
+h2 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); }
+h3 { font-size: 1.35rem; }
+p { margin: 0 0 1em; }
+
+.contenedor { width: min(var(--ancho), 100% - 32px); margin-inline: auto; }
+.seccion { padding: clamp(48px, 8vw, 96px) 0; }
+.seccion--madera { background: var(--nieve-2); }
+.seccion__intro { max-width: 640px; color: var(--texto-suave); margin-bottom: 2rem; }
+.etiqueta {
+  display: inline-block; font-size: .8rem; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--dulce-oscuro); margin-bottom: .6rem;
+}
+
+/* ---------- Encabezado y menú ---------- */
+.encabezado {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(30, 42, 68, .94); backdrop-filter: blur(6px);
+  color: var(--nieve);
+}
+.encabezado__fila { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo {
+  font-family: var(--letra-titulos); font-weight: 700; font-size: 1.35rem;
+  color: var(--nieve); text-decoration: none; display: flex; align-items: center; gap: .5rem;
+}
+.logo__copo { color: var(--dulce); }
+.menu { display: flex; gap: .3rem; list-style: none; margin: 0; padding: 0; }
+.menu a {
+  color: var(--nieve); text-decoration: none; font-weight: 700;
+  padding: .45rem .9rem; border-radius: 999px;
+}
+.menu a:hover, .menu a[aria-current="page"] { background: var(--dulce); color: var(--noche); }
+.menu-boton {
+  display: none; background: none; border: 2px solid var(--nieve); color: var(--nieve);
+  border-radius: 10px; padding: .35rem .7rem; font: inherit; font-weight: 700; cursor: pointer;
+}
+@media (max-width: 720px) {
+  .menu-boton { display: block; }
+  .menu {
+    display: none; position: absolute; left: 0; right: 0; top: 64px;
+    flex-direction: column; background: var(--noche); padding: .5rem 16px 1rem;
+  }
+  .menu.abierto { display: flex; }
+  .menu a { display: block; }
+}
+
+/* ---------- Portada (inicio) ---------- */
+.portada {
+  position: relative; overflow: hidden; color: var(--nieve);
+  min-height: min(88vh, 760px); display: grid; align-items: end;
+  background: var(--noche) url("../media/portada.jpg") center / cover no-repeat;
+}
+.portada::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(30,42,68,.15) 0%, rgba(30,42,68,.55) 55%, rgba(30,42,68,.92) 100%);
+}
+.portada__texto { position: relative; padding-bottom: clamp(40px, 8vh, 90px); max-width: 720px; }
+.portada h1 { color: var(--nieve); text-shadow: 0 3px 20px rgba(0,0,0,.35); }
+.portada p { font-size: 1.2rem; max-width: 560px; }
+
+.boton {
+  display: inline-block; background: var(--dulce); color: var(--noche);
+  font-weight: 800; text-decoration: none; padding: .8rem 1.4rem; border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(200,132,58,.35); transition: transform .15s;
+}
+.boton:hover { transform: translateY(-2px); }
+.boton--claro { background: transparent; color: var(--nieve); border: 2px solid var(--nieve); box-shadow: none; }
+.botones { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.4rem; }
+
+/* Nieve que cae (decorativa) */
+.nieve { position: absolute; inset: 0; pointer-events: none; }
+.nieve span {
+  position: absolute; top: -10px; width: 6px; height: 6px; border-radius: 50%;
+  background: #fff; opacity: .8; animation: caer linear infinite;
+}
+@keyframes caer { to { transform: translate(30px, 100vh); } }
+@media (prefers-reduced-motion: reduce) { .nieve { display: none; } }
+
+/* ---------- Video ---------- */
+.video {
+  border-radius: var(--radio); overflow: hidden; box-shadow: var(--sombra);
+  background: #000; aspect-ratio: 16 / 9;
+}
+.video video { width: 100%; height: 100%; object-fit: cover; }
+.dos-columnas { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(24px, 4vw, 56px); align-items: center; }
+@media (max-width: 860px) { .dos-columnas { grid-template-columns: 1fr; } }
+
+/* ---------- Tarjetas ---------- */
+.rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.tarjeta {
+  background: #fff; border-radius: var(--radio); overflow: hidden; box-shadow: var(--sombra);
+  display: flex; flex-direction: column;
+}
+.tarjeta__cuerpo { padding: 1.4rem 1.5rem 1.6rem; flex: 1; }
+.tarjeta img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+.tarjeta--personaje img { aspect-ratio: 1 / 1; object-position: top; }
+
+/* Concepto: receta · magia · momento */
+.pilares { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: pilar; }
+@media (max-width: 760px) { .pilares { grid-template-columns: 1fr; } }
+.pilar { background: #fff; border-radius: var(--radio); padding: 1.5rem; border-top: 6px solid var(--dulce); }
+.pilar:nth-child(2) { border-top-color: var(--lago); }
+.pilar:nth-child(3) { border-top-color: var(--rojo-buzo); }
+
+/* Cinta "la suomilandia" que se repite por tiempo indefinido */
+.cinta { background: var(--noche); color: var(--dulce); overflow: hidden; padding: .9rem 0; }
+.cinta__pista { display: flex; width: max-content; animation: cinta 40s linear infinite; }
+.cinta__pista span {
+  font-family: var(--letra-titulos); font-weight: 700; font-size: 1.4rem; white-space: nowrap; padding-right: 2rem;
+}
+@keyframes cinta { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .cinta__pista { animation: none; } }
+
+/* Receta secreta */
+.secreto {
+  margin-top: 1rem; background: var(--noche); color: var(--nieve);
+  border-radius: calc(var(--radio) - 4px); padding: 1.2rem 1.4rem;
+}
+.secreto h4 { font-family: var(--letra-titulos); font-size: 1.15rem; margin: 0 0 .4rem; color: var(--dulce); }
+.secreto h4::before { content: "✦ "; }
+.secreto p:last-child { margin-bottom: 0; }
+.pilar h3::before { counter-increment: pilar; content: counter(pilar) ". "; color: var(--texto-suave); }
+
+/* ---------- Fichas de personaje ---------- */
+.ficha {
+  display: grid; grid-template-columns: 320px 1fr; gap: clamp(24px, 4vw, 48px); align-items: start;
+  background: #fff; border-radius: var(--radio); padding: clamp(20px, 3vw, 36px); box-shadow: var(--sombra);
+}
+.ficha + .ficha { margin-top: 32px; }
+.ficha img { border-radius: calc(var(--radio) - 4px); width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: top; }
+@media (max-width: 760px) { .ficha { grid-template-columns: 1fr; } .ficha img { max-width: 360px; } }
+.rasgos { list-style: none; padding: 0; margin: 0 0 1.2rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+.rasgos li { background: var(--nieve-2); border-radius: 999px; padding: .3rem .85rem; font-size: .92rem; }
+.muestras { display: flex; gap: .5rem; align-items: center; margin-bottom: 1rem; font-size: .9rem; color: var(--texto-suave); }
+.muestra { width: 26px; height: 26px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
+
+/* ---------- Episodio ---------- */
+.episodio { background: #fff; border-radius: var(--radio); box-shadow: var(--sombra); overflow: hidden; }
+.episodio__cuerpo { padding: clamp(20px, 3vw, 36px); display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+@media (max-width: 760px) { .episodio__cuerpo { grid-template-columns: 1fr; } }
+.episodio__datos { color: var(--texto-suave); font-size: .95rem; margin-bottom: 1rem; }
+.relleno { border-radius: calc(var(--radio) - 4px); margin-top: .5rem; }
+
+/* ---------- Contenido provisional ---------- */
+.provisional {
+  border: 2px dashed var(--dulce); border-radius: var(--radio);
+  background: repeating-linear-gradient(-45deg, #fffaf2, #fffaf2 12px, #fbf0de 12px, #fbf0de 24px);
+  padding: 1.2rem 1.4rem; color: var(--texto-suave);
+}
+.provisional::before {
+  content: "Provisional"; display: inline-block; margin-bottom: .5rem;
+  font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  background: var(--dulce); color: var(--noche); padding: .15rem .55rem; border-radius: 6px;
+}
+.provisional p:last-child { margin-bottom: 0; }
+
+/* ---------- Pie ---------- */
+.pie { background: var(--noche); color: #c9d0de; padding: 40px 0; font-size: .95rem; }
+.pie a { color: var(--nieve); }
+.pie__fila { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+
+/* Redes sociales (pie de página) */
+.redes { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.redes__titulo { font-weight: 700; color: var(--nieve); margin-right: .3rem; }
+.redes a {
+  display: inline-flex; align-items: center; gap: .4rem; text-decoration: none;
+  color: var(--nieve); background: var(--noche-2); padding: .4rem .8rem; border-radius: 999px; font-weight: 700;
+}
+.redes a:hover { background: var(--dulce); color: var(--noche); }
+.redes svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* Accesibilidad: foco visible con teclado */
+a:focus-visible, button:focus-visible { outline: 3px solid var(--lago); outline-offset: 3px; }

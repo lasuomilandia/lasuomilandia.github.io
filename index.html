@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Suomilandia</title>
+  <meta name="description" content="La Suomilandia: un invierno finlandés donde se cocina y se comparte como en Uruguay. Cortos animados con el Mago de Finlandia y Mashavito.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__fila">
+      <a class="logo" href="index.html"><span class="logo__copo" aria-hidden="true">❄</span> La Suomilandia</a>
+      <button class="menu-boton" aria-expanded="false" aria-controls="menu">Menú</button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="personajes.html">Personajes</a></li>
+        <li><a href="cocina.html">La cocina</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Portada -->
+    <section class="portada">
+      <div class="nieve" aria-hidden="true"></div>
+      <div class="contenedor portada__texto">
+        <span class="etiqueta" style="color: var(--dulce)">Cortos animados</span>
+        <h1>La Suomilandia</h1>
+        <p>Donde el invierno es finlandés y la merienda es uruguaya.</p>
+        <div class="botones">
+          <a class="boton" href="#ultimo-episodio">Ver el último episodio</a>
+          <a class="boton boton--claro" href="personajes.html">Conocer a los personajes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Último episodio -->
+    <section class="seccion" id="ultimo-episodio">
+      <div class="contenedor dos-columnas">
+        <div class="video">
+          <video controls preload="metadata" poster="media/muffin-poster.jpg">
+            <source src="media/el-muffin-tiene-vida.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+        </div>
+        <div>
+          <span class="etiqueta">Último episodio</span>
+          <h2>El muffin tiene vida</h2>
+          <p>En la cocina de la cabaña, el Mago de Finlandia prueba un hechizo sobre una bandeja de muffins de arándano recién horneados. Uno de ellos cobra vida… y Mashavito quiere descubrir qué tiene adentro.</p>
+          <div class="botones">
+            <a class="boton" href="cocina.html#el-muffin-tiene-vida">Ver el episodio completo</a>
+            <a class="boton" style="background:var(--noche);color:var(--nieve);box-shadow:none" href="https://www.youtube.com/@lasuomilandia" target="_blank" rel="noopener">Más cortos en YouTube</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Concepto -->
+    <section class="seccion seccion--madera">
+      <div class="contenedor">
+        <span class="etiqueta">Cómo es este mundo</span>
+        <h2>Una receta, una magia, un momento</h2>
+        <p class="seccion__intro">La Suomilandia mezcla las cabañas, los bosques nevados y la luz dorada de Finlandia con los sabores y las costumbres de Uruguay. Cada historia nace en la cocina.</p>
+        <div class="pilares">
+          <div class="pilar">
+            <h3>Una receta</h3>
+            <p>Cocina finlandesa con alma uruguaya: muffins de arándano con relleno de dulce de leche, y lo que venga.</p>
+          </div>
+          <div class="pilar">
+            <h3>Una magia</h3>
+            <p>Un hechizo del Mago, y la comida cobra vida. A veces sale bien. A veces, no tanto.</p>
+          </div>
+          <div class="pilar">
+            <h3>Un momento</h3>
+            <p>Todo termina igual: compartiendo lo que se cocinó, junto al fuego, mientras afuera nieva. Y diciendo "la suomilandia". Muchas veces.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- La tradición: "la suomilandia" por tiempo indefinido -->
+    <div class="cinta" role="img" aria-label="la suomilandia, repetido por tiempo indefinido">
+      <div class="cinta__pista" aria-hidden="true">
+        <span>la suomilandia · la suomilandia · la suomilandia · la suomilandia · la suomilandia · la suomilandia ·</span>
+        <span>la suomilandia · la suomilandia · la suomilandia · la suomilandia · la suomilandia · la suomilandia ·</span>
+      </div>
+    </div>
+
+    <!-- Personajes -->
+    <section class="seccion">
+      <div class="contenedor">
+        <span class="etiqueta">Los personajes</span>
+        <h2>Quiénes viven en la cabaña</h2>
+        <div class="rejilla">
+          <a class="tarjeta tarjeta--personaje" href="personajes.html#mago" style="text-decoration:none;color:inherit">
+            <img src="media/mago.jpg" alt="El Mago de Finlandia con su sombrero azul marino y su varita, frente a una bandeja de muffins">
+            <div class="tarjeta__cuerpo">
+              <h3>El Mago de Finlandia</h3>
+              <p>Nayde para los amigos. Joven mago de sombrero azul marino y buzo a rayas rojas y azules. Cocina con varita.</p>
+            </div>
+          </a>
+          <a class="tarjeta tarjeta--personaje" href="personajes.html#mashavito" style="text-decoration:none;color:inherit">
+            <img src="media/mashavito.jpg" alt="Mashavito, un castor marrón sonriente, sobre la mesa de la cocina">
+            <div class="tarjeta__cuerpo">
+              <h3>Mashavito</h3>
+              <p>Castor, compañero del Mago y probador oficial de todo lo que sale del horno.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__fila">
+      <span>© <span class="anio">2026</span> La Suomilandia</span>
+      <nav class="redes" aria-label="Redes sociales">
+        <span class="redes__titulo">Seguinos en</span>
+        <a href="https://www.youtube.com/@lasuomilandia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .6 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-4.8 31 31 0 0 0-.4-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg>YouTube</a>
+        <a href="https://www.tiktok.com/@lasuomilandia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.4v13.6a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.3a6.3 6.3 0 1 0 5.4 6.3V8.7a7.9 7.9 0 0 0 4.6 1.5V6.8a4.6 4.6 0 0 1-4.6-4.8z"/></svg>TikTok</a>
+        <a href="https://www.instagram.com/la.suomilandia/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c-2.7 0-3 0-4 .1-3.6.2-5.6 2.2-5.8 5.8-.1 1-.1 1.3-.1 3.9s0 3 .1 4c.2 3.6 2.2 5.6 5.8 5.8 1 .1 1.3.1 4 .1s3 0 4-.1c3.6-.2 5.6-2.2 5.8-5.8.1-1 .1-1.3.1-4s0-3-.1-3.9c-.2-3.6-2.2-5.6-5.8-5.8-1-.1-1.3-.1-4-.1zm0 4.8a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zm5.2-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>Instagram</a>
+      </nav>
+      <span>Web en construcción · versión 1</span>
+    </div>
+  </footer>
+
+  <script src="js/principal.js"></script>
+</body>
+</html>

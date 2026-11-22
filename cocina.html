@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La cocina · La Suomilandia</title>
+  <meta name="description" content="Episodios, historias y recetas de La Suomilandia: cocina finlandesa con alma uruguaya.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__fila">
+      <a class="logo" href="index.html"><span class="logo__copo" aria-hidden="true">❄</span> La Suomilandia</a>
+      <button class="menu-boton" aria-expanded="false" aria-controls="menu">Menú</button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="personajes.html">Personajes</a></li>
+        <li><a href="cocina.html" aria-current="page">La cocina</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="seccion">
+    <div class="contenedor">
+      <span class="etiqueta">La cocina de Suomilandia</span>
+      <h1>Episodios, historias y recetas</h1>
+      <p class="seccion__intro">Cada episodio es una receta que cobra vida. Acá están los cortos, la historia de cada uno y lo poco que se sabe de cada receta: en la cabaña, las mejores son secretas.</p>
+
+      <!-- Episodio 1 -->
+      <article class="episodio" id="el-muffin-tiene-vida">
+        <div class="video" style="border-radius:0;box-shadow:none">
+          <video controls preload="metadata" poster="media/muffin-poster.jpg">
+            <source src="media/el-muffin-tiene-vida.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+        </div>
+        <div class="episodio__cuerpo">
+          <div>
+            <span class="etiqueta">Episodio 1</span>
+            <h2>El muffin tiene vida</h2>
+            <p class="episodio__datos">Corto animado · 18 segundos</p>
+            <h3>La historia</h3>
+            <p>Es tarde de nieve en la cabaña. El Mago de Finlandia saca del horno una bandeja de muffins de arándano y, con un toque de varita, uno de ellos se eleva brillando. Mashavito no lo puede creer.</p>
+            <p>Al final, los dos parten el muffin a medias y descubren el secreto que guardaba adentro: un corazón de dulce de leche.</p>
+          </div>
+          <div class="receta">
+            <h3>La receta</h3>
+            <p>Muffins de arándano con corazón de dulce de leche.</p>
+            <img class="relleno" src="media/relleno-dulce-de-leche.jpg" alt="Un muffin de arándano partido al medio, con el relleno de dulce de leche chorreando">
+            <div class="secreto">
+              <h4>Receta secreta</h4>
+              <p>Cómo se hacen estos muffins es un misterio de la cabaña. Digamos que es magia.</p>
+              <p>Lo único que se sabe: llevan <strong>arándanos</strong> y <strong>dulce de leche</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Próximo episodio -->
+      <div class="provisional" style="margin-top:32px">
+        <h3 style="margin-top:0">Próximo episodio</h3>
+        <p>Acá va a aparecer el siguiente corto cuando esté listo.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__fila">
+      <span>© <span class="anio">2026</span> La Suomilandia</span>
+      <nav class="redes" aria-label="Redes sociales">
+        <span class="redes__titulo">Seguinos en</span>
+        <a href="https://www.youtube.com/@lasuomilandia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .6 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-4.8 31 31 0 0 0-.4-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg>YouTube</a>
+        <a href="https://www.tiktok.com/@lasuomilandia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.4v13.6a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.3a6.3 6.3 0 1 0 5.4 6.3V8.7a7.9 7.9 0 0 0 4.6 1.5V6.8a4.6 4.6 0 0 1-4.6-4.8z"/></svg>TikTok</a>
+        <a href="https://www.instagram.com/la.suomilandia/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c-2.7 0-3 0-4 .1-3.6.2-5.6 2.2-5.8 5.8-.1 1-.1 1.3-.1 3.9s0 3 .1 4c.2 3.6 2.2 5.6 5.8 5.8 1 .1 1.3.1 4 .1s3 0 4-.1c3.6-.2 5.6-2.2 5.8-5.8.1-1 .1-1.3.1-4s0-3-.1-3.9c-.2-3.6-2.2-5.6-5.8-5.8-1-.1-1.3-.1-4-.1zm0 4.8a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zm5.2-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>Instagram</a>
+      </nav>
+      <span>Web en construcción · versión 1</span>
+    </div>
+  </footer>
+
+  <script src="js/principal.js"></script>
+</body>
+</html>
