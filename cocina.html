@@ -9,12 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/png" href="media/icono-64.png">
+  <link rel="apple-touch-icon" href="media/icono.png">
 </head>
 <body>
 
   <header class="encabezado">
     <div class="contenedor encabezado__fila">
-      <a class="logo" href="index.html"><span class="logo__copo" aria-hidden="true">❄</span> La Suomilandia</a>
+      <a class="logo" href="index.html"><img class="logo__emblema" src="media/icono-64.png" alt="" width="36" height="36"> La Suomilandia</a>
       <button class="menu-boton" aria-expanded="false" aria-controls="menu">Menú</button>
       <ul class="menu" id="menu">
         <li><a href="index.html">Inicio</a></li>
@@ -29,6 +31,33 @@
       <span class="etiqueta">La cocina de Suomilandia</span>
       <h1>Episodios, historias y recetas</h1>
       <p class="seccion__intro">Cada episodio es una pequeña aventura en la cabaña y sus alrededores. Acá están los cortos, la historia de cada uno y lo poco que se sabe de cada receta: en la cabaña, las mejores son secretas.</p>
+
+      <!-- Episodio 4 -->
+      <article class="episodio" id="vaari-llega">
+        <div class="video" style="border-radius:0;box-shadow:none">
+          <video controls preload="metadata" poster="media/vaari-llega-poster.jpg">
+            <source src="media/vaari-llega-ep4.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+        </div>
+        <div class="episodio__cuerpo">
+          <div>
+            <span class="etiqueta">Episodio 4</span>
+            <h2>Vaari llega a la cabaña</h2>
+            <p class="episodio__datos">Corto animado · 1 minuto</p>
+            <h3>La historia</h3>
+            <p>Es la primera noche en la cabaña nueva y adentro hace más frío que afuera. Nayde levanta la varita y, con un remolino de luz dorada, la llena de magia: mitad hogar de Laponia, mitad rancho de Tacuarembó, con el ombú creciendo en el medio del living.</p>
+            <p>Cuando por fin está todo calentito, alguien golpea la puerta. Es Don Karppinen, el que cuenta estas historias desde el primer día… y que hace tres capítulos que las cuenta desde afuera, con este frío.</p>
+          </div>
+          <div>
+            <div class="secreto">
+              <h4>Karppinen, apellido finlandés</h4>
+              <p>Mashavito escuchó "carpincho" y entendió <em>Karppinen</em>, un apellido finlandés de verdad. Don Karppinen, que es muy educado, nunca lo corrigió.</p>
+              <p>Esa noche compartieron la primera merienda los tres juntos: mate, muffins de arándano, tortas fritas y bollos de canela. Mashavito descubrió que el mate es amargo… y lo arregló mojando un muffin.</p>
+            </div>
+          </div>
+        </div>
+      </article>
 
       <!-- Episodio 3 -->
       <article class="episodio" id="el-hogar">
@@ -117,7 +146,7 @@
       <!-- Próximo episodio -->
       <div class="provisional" style="margin-top:32px">
         <h3 style="margin-top:0">Próximo episodio</h3>
-        <p>La cabaña ya está construida… ¿pero cómo es por dentro? Muy pronto, en el próximo corto.</p>
+        <p>Ahora que Vaari conoce la cabaña, ¿qué historia nos contará la próxima vez? Muy pronto, en el próximo corto.</p>
       </div>
     </div>
   </main>

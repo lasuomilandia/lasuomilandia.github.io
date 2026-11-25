@@ -62,6 +62,7 @@ p { margin: 0 0 1em; }
   color: var(--nieve); text-decoration: none; display: flex; align-items: center; gap: .5rem;
 }
 .logo__copo { color: var(--dulce); }
+.logo__emblema { width: 36px; height: 36px; border-radius: 50%; display: block; }
 .menu { display: flex; gap: .3rem; list-style: none; margin: 0; padding: 0; }
 .menu a {
   color: var(--nieve); text-decoration: none; font-weight: 700;

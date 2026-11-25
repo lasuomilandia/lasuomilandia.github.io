@@ -9,12 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/png" href="media/icono-64.png">
+  <link rel="apple-touch-icon" href="media/icono.png">
 </head>
 <body>
 
   <header class="encabezado">
     <div class="contenedor encabezado__fila">
-      <a class="logo" href="index.html"><span class="logo__copo" aria-hidden="true">❄</span> La Suomilandia</a>
+      <a class="logo" href="index.html"><img class="logo__emblema" src="media/icono-64.png" alt="" width="36" height="36"> La Suomilandia</a>
       <button class="menu-boton" aria-expanded="false" aria-controls="menu">Menú</button>
       <ul class="menu" id="menu">
         <li><a href="index.html">Inicio</a></li>
@@ -28,7 +30,7 @@
     <div class="contenedor">
       <span class="etiqueta">Personajes</span>
       <h1>Quiénes viven en la cabaña</h1>
-      <p class="seccion__intro">Dos amigos, una cocina en medio del bosque nevado y muchas ganas de merendar.</p>
+      <p class="seccion__intro">Dos amigos, una cocina en medio del bosque nevado, muchas ganas de merendar… y un abuelo carpincho que cuenta todas las historias.</p>
 
       <!-- El Mago de Finlandia -->
       <article class="ficha" id="mago">
@@ -76,6 +78,29 @@
           <div class="secreto">
             <h4>Su comida favorita</h4>
             <p>Todavía es un secreto de la cabaña. Solo podemos adelantar que es uruguaya… pero no del todo.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Don Karppinen -->
+      <article class="ficha" id="don-karppinen">
+        <img src="media/karppinen.jpg" alt="Don Karppinen, un carpincho anciano con gorro de lana mostaza con copos de nieve, anteojos redondos, bufanda verde, mate, termo y bastón">
+        <div>
+          <h2>Don Karppinen</h2>
+          <p>Un carpincho anciano, sabio y muy tranquilo. Es el que cuenta las historias de La Suomilandia: las conoce todas, incluso las de antes de la cabaña. Siempre tiene el mate en la mano. Nayde y Mashavito le dicen <strong>Vaari</strong>, que en finlandés quiere decir "abuelo".</p>
+          <h3>Por qué Karppinen</h3>
+          <p>Cuando Mashavito escuchó "carpincho" por primera vez, entendió <em>Karppinen</em>, un apellido finlandés de verdad. Y él, que es muy educado, nunca lo corrigió. Lo de "Don" es por los viejos sabios del campo uruguayo.</p>
+          <ul class="rasgos">
+            <li>Carpincho</li>
+            <li>Hocico y cejas canosas</li>
+            <li>Anteojos redondos</li>
+            <li>Gorro de lana mostaza</li>
+            <li>Bufanda verde musgo</li>
+            <li>Mate, termo y bastón</li>
+          </ul>
+          <div class="secreto">
+            <h4>Su lugar en la cabaña</h4>
+            <p>El sillón de cuero junto al fogón criollo. No vive en la cabaña: siempre llega de visita, con el termo bajo el brazo… y con una historia nueva.</p>
           </div>
         </div>
       </article>
